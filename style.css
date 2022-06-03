@@ -1,6 +1,60 @@
+/* Fonts
+font-family: 'Antonio', sans-serif;
+font-family: 'Spartan', sans-serif;
+ */
+
+:root {
+  --dark-navy: #070724;
+  --white: #ffffff;
+}
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: grey;
+  background-image: url("assets/background-image.png");
+  background-color: var(--dark-navy);
+  color: var(--white);
+}
+
+/* Typography */
+
+body {
+  font-family: 'Spartan', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.5625rem;
+}
+
+h1 {
+  font-family: 'Antonio', sans-serif;
+  font-weight: 400;
+  font-size: 5rem;
+  line-height: 6.4375rem;
+}
+
+h2 {
+  font-family: 'Antonio', sans-serif;
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 3.25rem;
+  letter-spacing: 0.09375rem;
+}
+
+h3 {
+  font-family: 'Spartan', sans-serif;
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1.5625rem;
+  letter-spacing: 0.16rem;
+}
+
+h4 {
+  font-family: 'Spartan', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.6875rem;
+  line-height: 1.5625rem;
+  letter-spacing: 0.0625rem;
 }
