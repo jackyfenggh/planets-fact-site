@@ -6,6 +6,11 @@ font-family: 'Spartan', sans-serif;
 :root {
   --dark-navy: #070724;
   --white: #ffffff;
+  --transparent-white: rgba(255, 255, 255, 0.2);
+  --light-grey: #838391;
+  --grey: #38384F;
+  --light-blue: #419EBB;
+  font-size: 16px;
 }
 
 body {
@@ -30,16 +35,18 @@ body {
 h1 {
   font-family: 'Antonio', sans-serif;
   font-weight: 400;
-  font-size: 5rem;
-  line-height: 6.4375rem;
+  font-size: 2.5rem;
+  line-height: 6rem;
+  margin: 0;
 }
 
 h2 {
   font-family: 'Antonio', sans-serif;
   font-weight: 400;
-  font-size: 2.5rem;
+  font-size: 1.75rem;
   line-height: 3.25rem;
-  letter-spacing: 0.09375rem;
+  letter-spacing: -0.09375rem;
+  margin: 1rem 0;
 }
 
 h3 {
@@ -57,4 +64,115 @@ h4 {
   font-size: 0.6875rem;
   line-height: 1.5625rem;
   letter-spacing: 0.0625rem;
+  margin: 0;
+  padding: 0.78rem 0;
+}
+
+
+a,
+a:visited {
+  text-decoration: none;
+  color: var(--white);
+}
+
+p {
+  margin: 0;
+}
+
+/* Layout */
+
+.container {
+  width: 87%;
+  margin: 0 auto;
+}
+
+/* nav layout */
+
+.container-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid var(--transparent-white);
+  border-top: 1px solid var(--transparent-white);
+}
+
+.current-page {
+  border-bottom: 4px solid var(--light-blue);
+}
+
+.current-page:hover {
+  color: var(--light-blue);
+}
+
+/* main layout */
+
+.container-hero-image {
+  display: flex;
+  justify-content: center;
+  padding: 6rem;
+}
+
+.planet-info-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.container-source {
+  display: flex;
+  align-items: center;
+  margin: 2rem 0;
+  color: var(--light-grey);
+}
+
+.container-source img {
+  padding-left: 0.5rem;
+}
+
+.container-source a {
+  color: var(--light-grey);
+  font-weight: 900;
+  text-decoration: underline;
+}
+
+/* facts layout */
+
+.container-facts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border: 1px solid var(--transparent-white);
+}
+
+.fact-title {
+  color: var(--light-grey);
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1rem;
+}
+
+.fact-figure {
+  font-family: 'Antonio', sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.625;
+  letter-spacing: -0.046875rem;
 }
