@@ -6,7 +6,8 @@ font-family: 'Spartan', sans-serif;
 :root {
   --dark-navy: #070724;
   --white: #ffffff;
-  --transparent-white: rgba(255, 255, 255, 0.2);
+  --transparent-white-heavy: rgba(255, 255, 255, 0.2);
+  --transparent-white-light: rgba(255, 255, 255, 0.1);
   --light-grey: #838391;
   --grey: #38384F;
   --light-blue: #419EBB;
@@ -51,10 +52,11 @@ h2 {
 
 h3 {
   font-family: 'Spartan', sans-serif;
+  font-style: normal;
   font-weight: 700;
-  font-size: 0.75rem;
+  font-size: 0.9375rem;
   line-height: 1.5625rem;
-  letter-spacing: 0.16rem;
+  letter-spacing: 0.085rem
 }
 
 h4 {
@@ -86,31 +88,60 @@ p {
   margin: 0 auto;
 }
 
-/* nav layout */
+/* desktop nav layout */
 
 .container-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 1px solid var(--transparent-white-heavy);
 }
 
-.container-nav {
+#container-planet-details-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   list-style: none;
   margin: 0;
   padding: 0;
-  border-bottom: 1px solid var(--transparent-white);
-  border-top: 1px solid var(--transparent-white);
+  border-bottom: 1px solid var(--transparent-white-heavy);
 }
 
-.current-page {
+.current-tab {
   border-bottom: 4px solid var(--light-blue);
 }
 
-.current-page:hover {
+.current-tab:hover {
   color: var(--light-blue);
+}
+
+/* planets nav layout */
+
+#container-planets-nav {
+  list-style: none;
+  padding: 0;
+  position: relative;
+  display: none;
+}
+
+.planets-nav-option {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  border-bottom: 1px solid var(--transparent-white-light);
+}
+
+.neptune {
+  border-bottom: 0;
+}
+
+#container-planets-nav h3 {
+  padding-left: 1.5625rem;
+}
+
+.planets-menu-arrow {
+  position: absolute;
+  left: 95%;
 }
 
 /* main layout */
@@ -159,7 +190,7 @@ p {
   align-items: center;
   padding: 1rem;
   margin: 0.5rem 0;
-  border: 1px solid var(--transparent-white);
+  border: 1px solid var(--transparent-white-heavy);
 }
 
 .fact-title {
