@@ -97,7 +97,7 @@ p {
   border-bottom: 1px solid var(--transparent-white-heavy);
 }
 
-#container-planet-details-nav {
+.container-planet-details-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -117,11 +117,10 @@ p {
 
 /* planets nav layout */
 
-#container-planets-nav {
+.container-planets-nav {
   list-style: none;
   padding: 0;
   position: relative;
-  display: none;
 }
 
 .planets-nav-option {
@@ -135,7 +134,7 @@ p {
   border-bottom: 0;
 }
 
-#container-planets-nav h3 {
+.container-planets-nav h3 {
   padding-left: 1.5625rem;
 }
 
@@ -207,3 +206,17 @@ p {
   line-height: 1.625;
   letter-spacing: -0.046875rem;
 }
+
+/* Utility */
+
+.hidden {
+  display: none;
+}
+
+/* .flex {
+  display: flex;
+}
+
+.block {
+  display: block;
+} */

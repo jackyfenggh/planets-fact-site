@@ -5,17 +5,20 @@ function setupEventListeners() {
 
 function toggleMenu() {
   var mainContent = document.querySelector('main');
-  var mobileNav = document.getElementById('container-planets-nav');
-  var planetDetailsTabs = document.getElementById('container-planet-details-nav');
+  var planetsNavMenu = document.querySelector('.container-planets-nav');
+  var planetDetailsTabs = document.querySelector('.container-planet-details-nav');
+  var hamburgerMenu = document.querySelector('.hamburger-menu');
 
-  if (mobileNav.style.display === 'block') {
-    mobileNav.style.display = 'none';
-    mainContent.style.display = 'block';
-    planetDetailsTabs.style.display = 'flex';
-  } else { // (mobileNav.style.display === 'none' || mobileNav.style.display === "") 
-    mobileNav.style.display = 'block';
-    mainContent.style.display = 'none';
-    planetDetailsTabs.style.display = 'none';
+  if (!planetsNavMenu.classList.contains('hidden')) {
+    planetsNavMenu.classList.add('hidden');
+    mainContent.classList.remove('hidden');
+    planetDetailsTabs.classList.remove('hidden');
+    hamburgerMenu.src = 'assets/hamburger-icon.png';
+  } else { // (planetsNavMenu.style.display === 'none' || planetsNavMenu.style.display === "") 
+    planetsNavMenu.classList.remove('hidden');
+    mainContent.classList.add('hidden');
+    planetDetailsTabs.classList.add('hidden');
+    hamburgerMenu.src = 'assets/hamburger-icon-dark.png';
   }
 }
 
