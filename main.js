@@ -5,7 +5,7 @@ function setupEventListeners() {
 
 function toggleMenu() {
   var mainContent = document.querySelector('main');
-  var planetsNavMenu = document.querySelector('.container-planets-nav');
+  var planetsNavMenu = document.querySelector('[aria-label="planets-nav"]');
   var planetDetailsTabs = document.querySelector('.container-planet-details-nav');
   var hamburgerMenu = document.querySelector('.hamburger-menu');
 
