@@ -6,9 +6,9 @@ font-family: 'Spartan', sans-serif;
 :root {
   --dark-navy: #070724;
   --white: #ffffff;
-  --transparent-white-heavy: rgba(255, 255, 255, 0.5);
+  --transparent-white-light: rgba(255, 255, 255, 0.5);
   --transparent-white-medium: rgba(255, 255, 255, 0.2);
-  --transparent-white-light: rgba(255, 255, 255, 0.1);
+  --transparent-white-heavy: rgba(255, 255, 255, 0.1);
   --light-grey: #838391;
   --grey: #38384F;
   --light-blue: #419EBB;
@@ -69,12 +69,17 @@ h4 {
   letter-spacing: 0.0625rem;
   margin: 0;
   padding: 0.78rem 0;
+  width: 100%;
 }
 
 
 a,
 a:visited {
   text-decoration: none;
+  color: var(--transparent-white-light);
+}
+
+a:hover {
   color: var(--white);
 }
 
@@ -108,12 +113,18 @@ p {
   border-bottom: 1px solid var(--transparent-white-medium);
 }
 
+.container-planet-details-nav a {
+  padding-top: 18px;
+  padding-bottom: 18px;
+  padding-right: 80%;
+}
+
 .current-tab {
   border-bottom: 4px solid var(--light-blue);
 }
 
-.current-tab:hover {
-  color: var(--light-blue);
+.current-tab a {
+  color: var(--white);
 }
 
 /* planets nav layout */
@@ -128,7 +139,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: left;
-  border-bottom: 1px solid var(--transparent-white-light);
+  border-bottom: 1px solid var(--transparent-white-heavy);
 }
 
 .neptune {
@@ -137,6 +148,10 @@ p {
 
 .container-planets-nav h3 {
   padding-left: 1.5625rem;
+}
+
+.container-planets-nav h3:hover {
+  color: var(--white);
 }
 
 .planets-menu-arrow {
@@ -154,6 +169,7 @@ p {
 
 .hero-image {
   width: 22vw;
+  max-width: 290px;
 }
 
 .planet-info-card {
@@ -226,6 +242,10 @@ p {
   visibility: hidden;
 }
 
+.current-planet {
+  color: var(--white);
+}
+
 /* Media queries */
 
 @media (min-width: 769px) {
@@ -233,10 +253,6 @@ p {
 
   h1 {
     font-size: 3rem;
-  }
-
-  #mercury-option {
-    padding-left: 0;
   }
 
   /* Header */
@@ -247,13 +263,11 @@ p {
 
   .container-header {
     flex-direction: column;
-    border-bottom: none;
   }
 
   [aria-label="planets-nav"] {
     display: flex;
     justify-content: center;
-    border-bottom: 1px solid var(--transparent-white-medium);
   }
 
   [aria-label="planet-details-nav"] {
@@ -268,17 +282,30 @@ p {
     display: none;
   }
 
+  .container-planets-nav a:hover {
+    color: var(--white);
+  }
+
+
+  #mercury-option {
+    padding-left: 0;
+  }
+
   .planets-nav-option {
     border-bottom: none;
   }
 
   /* Main */
 
-  .container-hero-image {
-    padding: 146px 0 130px 0;
+  .main {
+    display: block;
   }
 
-  .container-tablet-planet-info {
+  .container-hero-image {
+    padding: 130px 0;
+  }
+
+  .container-planet-info {
     display: flex;
     justify-content: space-between;
   }
@@ -291,10 +318,10 @@ p {
   [aria-label="tablet-planet-details-nav"] {
     display: block;
     width: 50%;
-    /* align-content: right; */
   }
 
   .container-planet-details-nav {
+    display: flex;
     padding: 50px 0;
     flex-direction: column;
     border-bottom: none;
@@ -305,7 +332,11 @@ p {
 
   .container-planet-details-nav p {
     padding: 0 1rem;
-    color: var(--transparent-white-heavy);
+    color: var(--transparent-white-light);
+  }
+
+  .container-planet-details-nav a {
+    color: var(--white);
   }
 
   .tablet-planet-details-nav-option {
@@ -319,9 +350,13 @@ p {
     border: 1px solid var(--transparent-white-medium);
   }
 
-  .current-tab {
+  .tablet-planet-details-nav-option:hover {
+    background-color: var(--light-grey);
+  }
+
+  .current-tab,
+  .current-tab:hover {
     background-color: var(--light-blue);
-    border-bottom: none;
   }
 
   .planet-info-card {
@@ -338,6 +373,58 @@ p {
 
   .fact {
     flex-direction: column;
+    align-items: flex-start;
     width: 19%;
+  }
+}
+
+@media (min-width: 1441px) {
+  /* Header */
+
+  .container-header {
+    border-bottom: none;
+  }
+
+  .container-desktop-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--transparent-white-medium);
+  }
+
+  .container-hero-image {
+    width: 50%;
+  }
+
+  /* Main */
+
+  .container-desktop-main-content {
+    display: flex;
+    margin-top: 50px;
+  }
+
+  .container-planet-info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 50%;
+  }
+
+  .planet-info-card {
+    width: 50%;
+    max-width: none;
+  }
+
+  .container-planet-details-nav {
+    list-style: none;
+    padding: 0;
+  }
+
+  .tablet-planet-details-nav-option {
+    width: 100%;
+  }
+
+  .container-facts {
+    margin-top: 50px;
   }
 }

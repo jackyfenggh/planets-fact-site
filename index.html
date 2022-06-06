@@ -13,99 +13,103 @@
   <body>
     <header>
       <div class="container">
-        <div class="container-header">
-          <h2>THE PLANETS</h2>
-          <input class="hamburger-menu" type="image" src ="assets/hamburger-icon.png" id="hamburger-menu" name="hamburger-menu" />
-        </div>
-        <nav aria-label="planet-details-nav">
-          <ul class="container-planet-details-nav">
-            <li>
-              <h4 class="current-tab"><a href="#">OVERVIEW</a></h4>
-            </li>
-            <li>
-              <h4><a href="#">STRUCTURE</a></h4></a>
-            </li>
-            <li>
-              <h4><a href="#">SURFACE</a></h4>
-            </li>
-          </ul>
-        </nav>
-        <nav aria-label="planets-nav" class="hidden">
-          <ul class="container-planets-nav">
-            <li class="planets-nav-option">
-              <img src="assets/ovals/Mercury oval.png" alt="">
-              <h3 id="mercury-option"><a href="#">MERCURY</a></h3>
-              <img class="planets-menu-arrow" src="assets/mobile-menu-arrow.png" alt="" style="justify-content:end">
-            </li>
-            <li class="planets-nav-option">
-              <img src="assets/ovals/venus oval.png" alt="">
-              <h3><a href="#">VENUS</a></h3>
-              <img class="planets-menu-arrow" src="assets/mobile-menu-arrow.png" alt="">
-            </li>
-            <li class="planets-nav-option">
-              <img src="assets/ovals/Earth oval.png" alt="">
-              <h3><a href="#">EARTH</a></h3>
-              <img class="planets-menu-arrow" src="assets/mobile-menu-arrow.png" alt="">
-            </li>
-            <li class="planets-nav-option">
-              <img src="assets/ovals/Mars oval.png" alt="">
-              <h3><a href="#">MARS</a></h3>
-              <img class="planets-menu-arrow" src="assets/mobile-menu-arrow.png" alt="">
-            </li>
-            <li class="planets-nav-option">
-              <img src="assets/ovals/Jupiter oval.png" alt="">
-              <h3><a href="#">JUPITER</a></h3>
-              <img class="planets-menu-arrow" src="assets/mobile-menu-arrow.png" alt="">
-            </li>
-            <li class="planets-nav-option">
-              <img src="assets/ovals/Saturn oval.png" alt="">
-              <h3><a href="#">SATURN</a></h3>
-              <img class="planets-menu-arrow" src="assets/mobile-menu-arrow.png" alt="">
-            </li>
-            <li class="planets-nav-option">
-              <img src="assets/ovals/Uranus oval.png" alt="">
-              <h3><a href="#">URANUS</a></h3>
-              <img class="planets-menu-arrow" src="assets/mobile-menu-arrow.png" alt="">
-            </li>
-            <li class="planets-nav-option neptune">
-              <img src="assets/ovals/Neptune oval.png" alt="">
-              <h3><a href="#">NEPTUNE</a></h3>
-              <img class="planets-menu-arrow" src="assets/mobile-menu-arrow.png" alt="">
-            </li>
-          </ul>
-        </nav>
-      </div> <!-- container close -->
-    </header>
-    <main>
-      <div class="container">
-        <div class="container-hero-image">
-          <img class="hero-image" src="assets/mercury.png" alt="">
-        </div>
-        <div class="container-tablet-planet-info">
-          <div class="planet-info-card">
-            <h1 class="info-card-planet-name">MERCURY</h1>
-            <p class="info-card-text">Mercury is the smallest planet in the Solar System and the closest to the Sun. Its orbit around the Sun takes 87.97 Earth days, the shortest of all the Sun's planets. Mercury is one of four terrestrial planets in the Solar System, and is a rocky body like Earth.</p>
-            <div class="container-source">
-              <p>Source : <a href="www.google.com">Wikipedia </a></p>
-              <img src="assets/external-link-icon.png" alt="">
-            </div>
+        <div class="container-desktop-header">
+          <div class="container-header">
+            <h2>THE PLANETS</h2>
+            <input class="hamburger-menu" type="image" src ="assets/hamburger-icon.png" id="hamburger-menu" name="hamburger-menu" />
           </div>
-          <nav aria-label="tablet-planet-details-nav" class="hidden">
+          <nav aria-label="planet-details-nav"> <!-- hidden by media query (min-width 769) -->
             <ul class="container-planet-details-nav">
-              <li class="tablet-planet-details-nav-option current-tab">
-                <p>01</p>
-                <h4><a href="#">OVERVIEW</a></h4>
+              <li>
+                <h4 class="current-tab"><a href="#">OVERVIEW</a></h4>
               </li>
-              <li class="tablet-planet-details-nav-option">
-                <p>02</p>
+              <li>
                 <h4><a href="#">STRUCTURE</a></h4></a>
               </li>
-              <li class="tablet-planet-details-nav-option">
-                <p>03</p>
+              <li>
                 <h4><a href="#">SURFACE</a></h4>
               </li>
             </ul>
           </nav>
+          <nav aria-label="planets-nav" class="hidden">
+            <ul class="container-planets-nav">
+              <li class="planets-nav-option">
+                <img src="assets/ovals/Mercury oval.png" alt="">
+                <h3 id="mercury-option"><a href="#" class="current-planet">MERCURY</a></h3>
+                <img class="planets-menu-arrow" src="assets/mobile-menu-arrow.png" alt="" style="justify-content:end">
+              </li>
+              <li class="planets-nav-option">
+                <img src="assets/ovals/venus oval.png" alt="">
+                <h3><a href="#">VENUS</a></h3>
+                <img class="planets-menu-arrow" src="assets/mobile-menu-arrow.png" alt="">
+              </li>
+              <li class="planets-nav-option">
+                <img src="assets/ovals/Earth oval.png" alt="">
+                <h3><a href="#">EARTH</a></h3>
+                <img class="planets-menu-arrow" src="assets/mobile-menu-arrow.png" alt="">
+              </li>
+              <li class="planets-nav-option">
+                <img src="assets/ovals/Mars oval.png" alt="">
+                <h3><a href="#">MARS</a></h3>
+                <img class="planets-menu-arrow" src="assets/mobile-menu-arrow.png" alt="">
+              </li>
+              <li class="planets-nav-option">
+                <img src="assets/ovals/Jupiter oval.png" alt="">
+                <h3><a href="#">JUPITER</a></h3>
+                <img class="planets-menu-arrow" src="assets/mobile-menu-arrow.png" alt="">
+              </li>
+              <li class="planets-nav-option">
+                <img src="assets/ovals/Saturn oval.png" alt="">
+                <h3><a href="#">SATURN</a></h3>
+                <img class="planets-menu-arrow" src="assets/mobile-menu-arrow.png" alt="">
+              </li>
+              <li class="planets-nav-option">
+                <img src="assets/ovals/Uranus oval.png" alt="">
+                <h3><a href="#">URANUS</a></h3>
+                <img class="planets-menu-arrow" src="assets/mobile-menu-arrow.png" alt="">
+              </li>
+              <li class="planets-nav-option neptune">
+                <img src="assets/ovals/Neptune oval.png" alt="">
+                <h3><a href="#">NEPTUNE</a></h3>
+                <img class="planets-menu-arrow" src="assets/mobile-menu-arrow.png" alt="">
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div> <!-- container close -->
+    </header>
+    <main class="main">
+      <div class="container">
+        <div class="container-desktop-main-content">
+          <div class="container-hero-image">
+            <img class="hero-image" src="assets/svg files/planet-mercury.svg" alt="">
+          </div>
+          <div class="container-planet-info">
+            <div class="planet-info-card">
+              <h1 class="info-card-planet-name">MERCURY</h1>
+              <p class="info-card-text">Mercury is the smallest planet in the Solar System and the closest to the Sun. Its orbit around the Sun takes 87.97 Earth days, the shortest of all the Sun's planets. Mercury is one of four terrestrial planets in the Solar System, and is a rocky body like Earth.</p>
+              <div class="container-source">
+                <p>Source : <a href="www.google.com">Wikipedia </a></p>
+                <img src="assets/external-link-icon.png" alt="">
+              </div>
+            </div>
+            <nav aria-label="tablet-planet-details-nav" class="hidden">
+              <ul class="container-planet-details-nav">
+                <li class="tablet-planet-details-nav-option current-tab">
+                  <p>01</p>
+                  <h4><a href="#">OVERVIEW</a></h4>
+                </li>
+                <li class="tablet-planet-details-nav-option">
+                  <p>02</p>
+                  <h4><a href="#">STRUCTURE</a></h4></a>
+                </li>
+                <li class="tablet-planet-details-nav-option">
+                  <p>03</p>
+                  <h4><a href="#">SURFACE</a></h4>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
         <div class="container-facts">
           <div class="fact">
