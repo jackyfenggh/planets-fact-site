@@ -129,7 +129,7 @@ p {
 
 /* planets nav layout */
 
-.container-planets-nav {
+#container-planets-nav {
   list-style: none;
   padding: 0;
   position: relative;
@@ -146,11 +146,11 @@ p {
   border-bottom: 0;
 }
 
-.container-planets-nav h3 {
+#container-planets-nav h3 {
   padding-left: 1.5625rem;
 }
 
-.container-planets-nav h3:hover {
+#container-planets-nav h3:hover {
   color: var(--white);
 }
 
@@ -167,7 +167,7 @@ p {
   padding: 6rem;
 }
 
-.hero-image {
+#hero-image {
   width: 22vw;
   max-width: 290px;
 }
@@ -274,20 +274,19 @@ p {
     display: none;
   }
 
-  .container-planets-nav {
+  #container-planets-nav {
     display: flex;
   }
 
-  .container-planets-nav img {
+  #container-planets-nav img {
     display: none;
   }
 
-  .container-planets-nav a:hover {
+  #container-planets-nav a:hover {
     color: var(--white);
   }
 
-
-  #mercury-option {
+  #mercury {
     padding-left: 0;
   }
 
