@@ -1,8 +1,3 @@
-/* Fonts
-font-family: 'Antonio', sans-serif;
-font-family: 'Spartan', sans-serif;
- */
-
 :root {
   --dark-navy: #070724;
   --white: #ffffff;
@@ -11,7 +6,14 @@ font-family: 'Spartan', sans-serif;
   --transparent-white-heavy: rgba(255, 255, 255, 0.1);
   --light-grey: #838391;
   --grey: #38384F;
-  --light-blue: #419EBB;
+  --mercury-blue: #419EBB;
+  --venus-orange: #EDA249;
+  --earth-purple: #6F2ED6;
+  --mars-orange: #D14C32;
+  --jupiter-red: #D83A34;
+  --saturn-orange: #CD5120;
+  --uranus-teal: #1EC2A4;
+  --neptune-blue: #2D68F0;
   font-size: 16px;
 }
 
@@ -32,6 +34,20 @@ body {
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.5625rem;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: var(--transparent-white-light);
+}
+
+a:hover {
+  color: var(--white);
+}
+
+p {
+  margin: 0;
 }
 
 h1 {
@@ -73,20 +89,6 @@ h4 {
 }
 
 
-a,
-a:visited {
-  text-decoration: none;
-  color: var(--transparent-white-light);
-}
-
-a:hover {
-  color: var(--white);
-}
-
-p {
-  margin: 0;
-}
-
 /* Layout */
 
 .container {
@@ -119,8 +121,36 @@ p {
   padding-right: 80%;
 }
 
-.current-tab {
-  border-bottom: 4px solid var(--light-blue);
+.mercury-colour {
+  border-bottom: 4px solid var(--mercury-blue);
+}
+
+.venus-colour {
+  border-bottom: 4px solid var(--venus-orange);
+}
+
+.earth-colour {
+  border-bottom: 4px solid var(--earth-purple);
+}
+
+.mars-colour {
+  border-bottom: 4px solid var(--mars-orange);
+}
+
+.jupiter-colour {
+  border-bottom: 4px solid var(--jupiter-red);
+}
+
+.saturn-colour {
+  border-bottom: 4px solid var(--saturn-orange);
+}
+
+.uranus-colour {
+  border-bottom: 4px solid var(--uranus-teal);
+}
+
+.neptune-colour {
+  border-bottom: 4px solid var(--neptune-blue);
 }
 
 .current-tab a {
@@ -161,7 +191,7 @@ p {
 
 /* main layout */
 
-.container-hero-image {
+#container-hero-image {
   display: flex;
   justify-content: center;
   padding: 6rem;
@@ -177,6 +207,11 @@ p {
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+#info-card-text {
+  max-width: none;
+  height: 132px;
 }
 
 .container-source {
@@ -300,8 +335,8 @@ p {
     display: block;
   }
 
-  .container-hero-image {
-    padding: 130px 0;
+  #container-hero-image {
+    margin: auto;
   }
 
   .container-planet-info {
@@ -310,8 +345,9 @@ p {
   }
 
   .planet-info-card {
-    width: 50%;
     max-width: 360px;
+    align-items: flex-start;
+    text-align: left;
   }
 
   [aria-label="tablet-planet-details-nav"] {
@@ -353,15 +389,44 @@ p {
     background-color: var(--light-grey);
   }
 
-  .current-tab,
-  .current-tab:hover {
-    background-color: var(--light-blue);
+  .mercury-colour,
+  .mercury-colour:hover {
+    background-color: var(--mercury-blue);
   }
 
-  .planet-info-card {
-    width: 50%;
-    align-items: flex-start;
-    text-align: left;
+  .venus-colour,
+  .venus-colour:hover {
+    background-color: var(--venus-orange);
+  }
+  
+  .earth-colour,
+  .earth-colour:hover {
+    background-color: var(--earth-purple);
+  }
+
+  .mars-colour,
+  .mars-colour:hover {
+    background-color: var(--mars-orange);
+  }
+
+  .jupiter-colour,
+  .jupiter-colour:hover {
+    background-color: var(--jupiter-red);
+  }
+
+  .saturn-colour,
+  .saturn-colour:hover {
+    background-color: var(--saturn-orange);
+  }
+
+  .uranus-colour,
+  .uranus-colour:hover {
+    background-color: var(--uranus-teal);
+  }
+
+  .neptune-colour,
+  .neptune-colour:hover {
+    background-color: var(--neptune-blue);
   }
 
   /* Facts layout */
@@ -390,11 +455,12 @@ p {
     border-bottom: 1px solid var(--transparent-white-medium);
   }
 
-  .container-hero-image {
+  #container-hero-image {
+    padding: 0;
     width: 50%;
   }
 
-  /* Main */
+  /* main layout */
 
   .container-desktop-main-content {
     display: flex;
@@ -412,6 +478,11 @@ p {
   .planet-info-card {
     width: 50%;
     max-width: none;
+  }
+
+  #info-card-text {
+    max-width: none;
+    height: 170px;
   }
 
   .container-planet-details-nav {
