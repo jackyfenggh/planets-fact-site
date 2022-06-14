@@ -21,17 +21,6 @@ fetch(planet_data_url)
     };
   });
 
-// const planetColours = {
-//   'mercury': '#419EBB',
-//   'venus': '#EDA249',
-//   'earth': '#6F2ED6',
-//   'mars': '#D14C32',
-//   'jupiter': '#D83A34',
-//   'saturn': '#CD5120',
-//   'uranus': '#1EC2A4',
-//   'neptune': '#2D68F0'
-// }
-
 const planetColours = {
   'mercury': 'mercury-colour',
   'venus': 'venus-colour',
@@ -48,17 +37,6 @@ let pageContentSettings = {
   'currentPlanetColour': 'mercury-colour',
   'currentTab': 'overview'
 };
-
-// const MERCURY_COLOUR = '#419EBB';
-// const VENUS_COLOUR = '#EDA249';
-// const EARTH_COLOUR = '#6F2ED6';
-// const MARS_COLOUR = '#D14C32';
-// const JUPITER_COLOUR = '#D83A34';
-// const SATURN_COLOUR = '#CD5120';
-// const URANUS_COLOUR = '#1EC2A4';
-// const NEPTUNE_COLOUR = '#2D68F0';
-
-// Helper functions
 
 function getColourName() {
 
